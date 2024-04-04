@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Base : MonoBehaviour
 {
-    protected StateMachine<Base> _stateMachine;
+    protected StateMachine1<Base> StateMachine1;
 
     public Animator Anim;
     public Rigidbody2D Rigidbody2D;
@@ -34,9 +34,9 @@ public class Base : MonoBehaviour
     }
     private void AddState()
     {
-        _stateMachine = new StateMachine<Base>(this, new Idle());
-        _stateMachine.AddState(new Attack());
-        _stateMachine.AddState(new Run());
+        StateMachine1 = new StateMachine1<Base>(this, new Idle());
+        StateMachine1.AddState(new Attack());
+        StateMachine1.AddState(new Run());
     }
 
     public bool Attack()

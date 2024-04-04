@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 
-public class Idle : State<Base>
+public class Idle : State1<Base>
 {   
     public override void OnInitialized()
     {
@@ -19,13 +19,13 @@ public class Idle : State<Base>
     {
         if(context.Attack())
         {
-            _stateMachine.ChangeState<Attack>();
+            StateMachine1.ChangeState<Attack>();
             return;    
         }
 
         if (context.Run())
         {
-            _stateMachine.ChangeState<Run>();
+            StateMachine1.ChangeState<Run>();
             return; 
         }
     }

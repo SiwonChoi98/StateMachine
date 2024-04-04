@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Run : State<Base>
+public class Run : State1<Base>
 {
     public override void OnInitialized()
     {
@@ -21,7 +21,7 @@ public class Run : State<Base>
     
         //ELSE
             //if(Attack == true)
-            _stateMachine.ChangeState<Attack>();
+            StateMachine1.ChangeState<Attack>();
             return;
             //else 
             //_stateMachine.ChangeState<Idle>();
